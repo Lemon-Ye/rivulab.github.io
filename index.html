@@ -7,7 +7,7 @@
       name="description"
       content="rivulab 专注医疗电子硬件设计，探索人体信号与精密电流之间的开放原型。"
     >
-    <title>rivulab</title>
+    <title>rivulab | 开源医疗硬件</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -32,8 +32,14 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Medical Electronics &middot; Hardware Design &middot; Open Prototypes</p>
-          <h1>生命与电路之间，流动一束微光。</h1>
+          <p class="eyebrow">
+            <span class="eyebrow-full">Medical Electronics &middot; Hardware Design &middot; Open Prototypes</span>
+            <span class="eyebrow-short">
+              <span>Medical Electronics</span>
+              <span>Hardware Design &middot; Open Prototypes</span>
+            </span>
+          </p>
+          <h1>生命与电路之间，<span class="mobile-title-break">流动一束微光。</span></h1>
           <p class="hero-text">
             rivulab 取意 rivulet，小溪般细微而持续的流动，如同生命的脉搏。我们专注搭建开放、清晰、可复现的医疗电子原型。
           </p>
@@ -52,21 +58,21 @@
         </div>
         <div class="feature-grid">
           <article class="feature">
-            <span class="feature-icon" style="color:var(--river);">🔬</span>
+            <span class="feature-icon">🔬</span>
             <h3>专注医疗电子</h3>
             <p>
               跨越生理信号与电子电路的交界处。我们将研究重点放在生命体征提取与精密仪器设计上。
             </p>
           </article>
           <article class="feature">
-            <span class="feature-icon" style="color:var(--river);">💡</span>
+            <span class="feature-icon">💡</span>
             <h3>开源与低成本</h3>
             <p>
               打破高昂的商业医疗设备与科研仪器的壁垒。坚持分享硬件原理图、PCB 设计与基础处理算法。
             </p>
           </article>
           <article class="feature">
-            <span class="feature-icon" style="color:var(--river);">🛠️</span>
+            <span class="feature-icon">🛠️</span>
             <h3>极客精神与制造</h3>
             <p>
               崇尚动手实践与软硬件结合，通过 3D 打印结构件、定制数据采集板，从零开始搭建属于自己的独立生理监测实验台。
@@ -79,45 +85,43 @@
         <div class="section-heading">
           <p class="eyebrow">Projects</p>
           <h2>开源项目探索</h2>
-          <p>选择下方感兴趣的项目卡片，进入了解最新的硬件版本与算法研发进度。</p>
+          <p>查看下方正在推进的硬件方向与后续计划，项目细节会随原型进展持续更新。</p>
         </div>
         
         <div class="project-grid">
-           <!-- 项目1卡片：EIT硬件，用户可以点击进入专属页面 -->
-           <a href="project-eit.html" class="project-card">
-               <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop" alt="电子电路板与组件">
+           <article class="project-card">
+               <img src="assets/eit-hardware-prototype.jpg" alt="生物电阻抗成像硬件原型">
                <div class="project-card-content">
                    <h3>生物电阻抗成像 (EIT) 硬件原型</h3>
                    <p>研发基于高精度微小恒流源的 16 通道阻抗数据采集板。</p>
                </div>
-           </a>
+           </article>
 
-           <!-- 项目2卡片：预留项目 -->
-           <a href="#future" class="project-card" style="opacity: 0.85; border-style: dashed;">
-               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop" alt="从太空看地球" style="opacity: 0.8;">
+           <article class="project-card project-card-muted">
+               <img src="assets/project-future-kicad-schematic-white.png" alt="白底 KiCad 风格电路原理图">
                <div class="project-card-content">
                    <h3>更多项目在探索中...</h3>
                    <p>在医疗电子硬件与生物工程数据科学的交叉点，持续孵化新的开源实验原型与技术文章，敬请期待。</p>
                </div>
-           </a>
+           </article>
         </div>
       </section>
 
-      <section id="join" class="cta-section" style="background-color: var(--surface); padding: 4rem 2rem; border-radius: 16px; margin: 4rem auto; max-width: 1200px; text-align: center;">
+      <section id="join" class="cta-section">
         <div>
-          <p class="eyebrow" style="color: var(--river);">Join the journey</p>
-          <h2>欢迎极客与创客探讨。</h2>
-          <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--muted);">
-            如果你同样热爱医疗电子、硬件 DIY 或者正在研究生物医学工程技术，欢迎在 GitHub 上提 Issue 或通过社交渠道建立联系。
+          <p class="eyebrow">Join the journey</p>
+          <h2>一起探索</h2>
+          <p class="join-text">
+            如果你关注医疗电子、硬件 DIY 或生物医学工程，欢迎在 GitHub 上交流想法、反馈问题，或一起完善开源原型。
           </p>
         </div>
-        <a class="button primary" href="https://github.com/rivulab" style="background-color: var(--river); color: white; padding: 0.8rem 2rem; border-radius: 30px;">访问 GitHub 仓库</a>
+        <a class="button primary" href="https://github.com/rivulab" target="_blank" rel="noopener noreferrer">访问 GitHub 仓库</a>
       </section>
     </main>
 
-    <footer class="site-footer" style="text-align: center; padding: 2rem 0; color: var(--muted); border-top: 1px solid var(--line);">
-      <p>© <span id="year">2026</span> RivuLab. Medical Electronics & Bioengineering.</p>
-      <a href="#top" style="color: var(--river);">返回顶部</a>
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> rivulab</p>
+      <a href="#top">返回顶部</a>
     </footer>
 
     <script src="script.js"></script>
