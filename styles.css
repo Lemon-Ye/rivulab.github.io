@@ -126,10 +126,11 @@ img {
   align-items: center;
   overflow: hidden;
   min-height: calc(100vh - 76px);
-  padding: clamp(72px, 10vw, 128px) clamp(18px, 5vw, 72px) 56px;
+  padding-block: clamp(72px, 10vw, 128px) 56px;
+  padding-inline: clamp(32px, 8vw, 180px) clamp(24px, 6vw, 96px);
   background:
     linear-gradient(90deg, rgba(2, 7, 18, 0.78) 0%, rgba(2, 7, 18, 0.48) 38%, rgba(2, 7, 18, 0.08) 68%, rgba(2, 7, 18, 0.04) 100%),
-    url("assets/hero-pcb-heic-rivulab.png") center / cover no-repeat;
+    url("assets/hero-circuit-hand.png") center / cover no-repeat;
 }
 
 .hero-copy {
@@ -145,6 +146,12 @@ img {
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  line-height: 1.35;
 }
 
 h1,
@@ -452,6 +459,7 @@ h3 {
   .hero {
     min-height: auto;
     padding-top: 56px;
+    padding-inline: clamp(18px, 5vw, 32px);
     background-position: 62% center;
   }
 
