@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="生物电阻抗成像 EIT 硬件原型项目介绍，记录 PCB 验证、采集板设计与后续完善计划。"
+    >
+    <title>生物电阻抗成像 (EIT) 硬件原型 | rivulab</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="rivulab 首页">
+        <img class="brand-wordmark" src="assets/rivulab-wordmark-white.png" alt="" aria-hidden="true">
+        <span class="sr-only">rivulab</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">打开导航</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主导航"></nav>
+    </header>
+
+    <main id="top">
+      <section class="project-hero">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Project Detail</p>
+          <h1><span class="project-title-main">生物电阻抗成像 (EIT)</span><span class="mobile-title-break">硬件原型</span></h1>
+          <p>
+            以可复现的硬件原型探索人体阻抗分布的采集与重建，让微小电流穿过物理世界，也让生命信号以更清晰的方式被观察。
+          </p>
+          <div class="project-actions">
+            <a class="button primary" href="https://github.com/rivulab" target="_blank" rel="noopener noreferrer">项目仓库</a>
+            <a class="button secondary" href="index.html#projects">返回项目列表</a>
+          </div>
+        </div>
+        <img src="assets/eit-hardware-prototype.jpg" alt="生物电阻抗成像 EIT 硬件原型">
+      </section>
+
+      <section id="hardware" class="section project-detail-section">
+        <div class="section-heading">
+          <p class="eyebrow">Hardware</p>
+          <h2>硬件特性</h2>
+          <p>围绕 16 通道阻抗数据采集板展开设计，重点关注微小恒流激励、模拟前端、通道复用与可复现实验接口。</p>
+        </div>
+        <div class="detail-list">
+          <p>高精度微小恒流源，用于稳定注入安全、可控的激励电流。</p>
+          <p>多通道电极切换与采集链路，用于构建基础 EIT 测量序列。</p>
+          <p>面向开源复现的板级设计，兼顾调试便利性、可制造性与后续扩展空间。</p>
+        </div>
+      </section>
+
+      <section id="progress" class="section project-detail-section">
+        <div class="section-heading">
+          <p class="eyebrow">Progress</p>
+          <h2>当前进度</h2>
+        </div>
+        <div class="detail-note">
+          <p>PCB 验证已通过，项目进入功能完善、稳定性优化与实验流程整理阶段。</p>
+        </div>
+      </section>
+
+      <section id="showcase" class="section project-detail-section">
+        <div class="section-heading">
+          <p class="eyebrow">Showcase</p>
+          <h2>效果展示</h2>
+        </div>
+        <div class="project-video">
+          <video controls preload="metadata">
+            <source src="assets/eit-demo.mp4" type="video/mp4">
+            当前浏览器不支持视频播放。
+          </video>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> rivulab</p>
+      <a href="#top">返回顶部</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

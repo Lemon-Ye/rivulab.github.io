@@ -23,8 +23,8 @@
         <span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="主导航">
-        <a href="#about">rivulab是什么</a>
-        <a href="#projects">项目探索</a>
+        <a href="#about">愿景</a>
+        <a href="#projects">开源项目</a>
         <a href="#join">与我们接触</a>
       </nav>
     </header>
@@ -41,7 +41,7 @@
           </p>
           <h1>生命与电路之间，<span class="mobile-title-break">流动一束微光。</span></h1>
           <p class="hero-text">
-            rivulab 取意 rivulet，小溪般细微而持续的流动，如同生命的脉搏。我们专注搭建开放、清晰、可复现的医疗电子原型。
+            rivulab 取意 rivulet：细小的电流、溪流与开源星火，皆以微弱之势持续向前；而生命的信号，也正是在这样的流动中被听见。
           </p>
           <div class="hero-actions" aria-label="快速入口">
             <a class="button primary" href="#projects">浏览项目</a>
@@ -53,7 +53,7 @@
       <section id="about" class="section">
         <div class="section-heading">
           <p class="eyebrow">Vision</p>
-          <h2>rivulab是什么</h2>
+          <h2>关于 rivulab</h2>
           <p>从仿真走向物理世界，寻找极具性价比的生理电信号监测方案。</p>
         </div>
         <div class="feature-grid">
@@ -84,24 +84,34 @@
       <section id="projects" class="section">
         <div class="section-heading">
           <p class="eyebrow">Projects</p>
-          <h2>开源项目探索</h2>
+          <h2>开源项目</h2>
           <p>查看下方正在推进的硬件方向与后续计划，项目细节会随原型进展持续更新。</p>
         </div>
         
         <div class="project-grid">
-           <article class="project-card">
+           <a class="project-card project-card-link" href="eit.html" aria-label="查看生物电阻抗成像 EIT 硬件原型项目详情">
                <img src="assets/eit-hardware-prototype.jpg" alt="生物电阻抗成像硬件原型">
                <div class="project-card-content">
                    <h3>生物电阻抗成像 (EIT) 硬件原型</h3>
-                   <p>研发基于高精度微小恒流源的 16 通道阻抗数据采集板。</p>
+                   <p>研发基于高精度微小恒流源的 16 通道阻抗数据采集板，当前 PCB 已完成验证，项目进入功能完善与稳定性优化阶段。</p>
+               </div>
+           </a>
+
+           <article class="project-card">
+               <div class="project-card-media project-card-media-tvns">
+                   <img src="tvns.png" alt="迷走神经电刺激（tVNS）硬件原型">
+               </div>
+               <div class="project-card-content">
+                   <h3>迷走神经电刺激（tVNS）硬件原型</h3>
+                   <p>围绕低功耗刺激输出、参数调节与安全保护电路展开设计，当前进入 PCB 验证阶段。</p>
                </div>
            </article>
 
            <article class="project-card project-card-muted">
-               <img src="assets/project-future-kicad-schematic-white.png" alt="白底 KiCad 风格电路原理图">
+               <img class="project-image-cover" src="assets/project-earth-from-space.png" alt="太空视角下的地球">
                <div class="project-card-content">
                    <h3>更多项目在探索中...</h3>
-                   <p>在医疗电子硬件与生物工程数据科学的交叉点，持续孵化新的开源实验原型与技术文章，敬请期待。</p>
+                   <p>敬请期待。</p>
                </div>
            </article>
         </div>
@@ -115,7 +125,7 @@
             如果你关注医疗电子、硬件 DIY 或生物医学工程，欢迎在 GitHub 上交流想法、反馈问题，或一起完善开源原型。
           </p>
         </div>
-        <a class="button primary" href="https://github.com/rivulab" target="_blank" rel="noopener noreferrer">访问 GitHub 仓库</a>
+        <a class="button primary" href="https://github.com/Lemon-Ye" target="_blank" rel="noopener noreferrer">访问 GitHub 仓库</a>
       </section>
     </main>
 

@@ -2,6 +2,14 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const year = document.querySelector("#year");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+const isReload = navigationEntry?.type === "reload";
+const isHomePage = /(^|\/)(index\.html)?$/.test(window.location.pathname);
+
+if (isHomePage && isReload && window.location.hash) {
+  history.replaceState(null, "", window.location.pathname + window.location.search);
+  window.scrollTo(0, 0);
+}
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -25,17 +33,20 @@ const revealTargets = [
   ".section-heading",
   ".feature",
   ".project-card",
+  ".detail-item",
+  ".detail-list",
   ".cta-section",
 ];
 
 const revealElements = revealTargets.flatMap((selector) =>
   Array.from(document.querySelectorAll(selector)),
 );
+const revealState = new WeakSet();
 
 revealElements.forEach((element, index) => {
   element.classList.add("reveal");
 
-  if (element.matches(".feature, .project-card")) {
+  if (element.matches(".feature, .project-card, .detail-item")) {
     element.classList.add("reveal-card");
   }
 
@@ -48,16 +59,18 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.intersectionRatio >= 0.14) {
           entry.target.classList.add("is-visible");
-        } else {
+          revealState.add(entry.target);
+        } else if (revealState.has(entry.target) && entry.intersectionRatio <= 0.02) {
           entry.target.classList.remove("is-visible");
+          revealState.delete(entry.target);
         }
       });
     },
     {
       rootMargin: "0px 0px -12% 0px",
-      threshold: 0.14,
+      threshold: [0.02, 0.14],
     },
   );
 
