@@ -604,15 +604,11 @@ h3 {
 
 @media (min-width: 1680px) {
   .hero {
-    padding-inline-start: clamp(88px, 5.5vw, 128px);
+    grid-template-columns: minmax(0, 1560px);
   }
 
   .hero::before {
     background-position: 52% center;
-  }
-
-  .hero-copy {
-    transform: translateX(-28px);
   }
 
   h1 {
